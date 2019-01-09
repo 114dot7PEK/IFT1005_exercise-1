@@ -19,12 +19,12 @@ start = element article {
     }?,
     element paragraphes { img | phrase },
     element source {
-		attribute src { xsd:anyURI }
-		attribute annee { xsd:gYear }
+	    attribute src { xsd:anyURI }
+	    attribute annee { xsd:gYear }
     },
     element auteur {
-		element nom { text },
-		element prenom { text }
+	    element nom { text },
+	    element prenom { text }
     }
 }
 
