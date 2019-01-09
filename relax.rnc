@@ -17,16 +17,15 @@ start = element article {
             maxLength = "49"
             }
     }?,
-    element paragraphes { img | phrase }
-    },
-	element source {
+    element paragraphes { img | phrase },
+    element source {
 		attribute src { xsd:anyURI }
 		attribute annee { xsd:gYear }
-	},
-	element auteur {
+    },
+    element auteur {
 		element nom { text },
 		element prenom { text }
-	},
+    }
 }
 
 #variables
