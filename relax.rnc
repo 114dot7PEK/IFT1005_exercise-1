@@ -5,11 +5,11 @@ start = element article {
     attribute type { "sport" | "beaute" | "business" },
     attribute annee { xsd:gYear },
     element titre {
+	attribute couleur { "rouge" | "noire" | "bleu"},
         xsd:string {
             minLength = "10"
             maxLength = "50"
-            },
-        attribute couleur { "rouge" | "noire" | "bleu"}
+            }
     },
     element soutitre {
         xsd:string {
@@ -17,10 +17,21 @@ start = element article {
             maxLength = "49"
             }
     }?,
-    element paragraphe {
-        element image {
-            attribute src { xsd:anyURI},
-            attribute date { xsd:date }
-        },
-        element phrase { text },
+    element paragraphes { img | phrase }
     },
+	element source {
+		attribute src { xsd:anyURI }
+		attribute annee { xsd:gYear }
+	},
+	element auteur {
+		element nom { text },
+		element prenom { text }
+	},
+}
+
+#variables
+img = element image {
+            attribute src { xsd:anyURI },
+            attribute date { xsd:date }
+        }
+phrase = element paragraphe { text }
