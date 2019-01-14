@@ -5,7 +5,7 @@ start = element article {
     attribute type { "sport" | "beaute" | "business" },
     attribute annee { xsd:gYear },
     element titre {
-	attribute couleur { "rouge" | "noire" | "bleu"},
+	attribute couleur { "rouge" | "noire" | "bleu" },
         xsd:string {
             minLength = "10"
             maxLength = "50"
@@ -17,7 +17,7 @@ start = element article {
             maxLength = "49"
             }
     }?,
-    element paragraphes { img | paragraphe },
+    element paragraphes { img | paragraphe }+,
     element source {
 	    attribute src { xsd:anyURI },
 	    attribute annee { xsd:gYear }
